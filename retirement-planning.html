@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Retirement Planning Strategies in Edgewater, FL | Pete Arnold</title>
+  <meta name="description" content="Key retirement planning considerations for people in Edgewater, Port Orange, New Smyrna Beach, and Volusia County, FL. Social Security, RMDs, healthcare, and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1a2744; --gold: #c9a84c; --gold-light: #e2c57a;
+      --cream: #f8f5ef; --white: #ffffff; --gray: #6b7280; --gray-light: #f3f0ea; --text: #2d2d2d;
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Source Sans 3', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--cream); line-height: 1.7; }
+
+    nav {
+      background: var(--navy); padding: 0 2rem; position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav-brand { color: var(--white); font-family: var(--serif); font-size: 1.2rem; text-decoration: none; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 4px; transition: all 0.2s; letter-spacing: 0.03em; text-transform: uppercase; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); background: rgba(255,255,255,0.05); }
+
+    .page-hero { background: var(--navy); padding: 5rem 8vw 4rem; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%); }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .page-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--white); line-height: 1.2; }
+    .page-hero .lead { color: rgba(255,255,255,0.65); font-weight: 300; font-size: 1.05rem; margin-top: 1rem; }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 4rem;
+      padding: 4.5rem 8vw;
+      align-items: start;
+    }
+
+    .article-body h2 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      color: var(--navy);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .article-body h2:first-child { margin-top: 0; }
+
+    .article-body h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin: 2rem 0 0.6rem;
+    }
+
+    .article-body p {
+      color: var(--gray);
+      font-size: 1rem;
+      font-weight: 300;
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body strong { color: var(--navy); font-weight: 600; }
+
+    .number-block {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .number-block h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .num-badge {
+      background: var(--navy);
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .sidebar { position: sticky; top: 90px; }
+
+    .sidebar-box {
+      background: var(--navy);
+      padding: 1.75rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .sidebar-box p { color: rgba(255,255,255,0.65); font-size: 0.88rem; font-weight: 300; margin-bottom: 1rem; }
+
+    .btn {
+      display: inline-block; background: var(--gold); color: var(--navy); font-family: var(--sans);
+      font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; padding: 0.85rem 1.5rem; border-radius: 3px; transition: all 0.25s; width: 100%; text-align: center;
+    }
+    .btn:hover { background: var(--gold-light); }
+
+    .related-links { list-style: none; }
+    .related-links li { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .related-links a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; padding: 0.6rem 0; transition: color 0.2s; font-weight: 300; }
+    .related-links a:hover { color: var(--gold); }
+
+    .disclaimer {
+      background: var(--gray-light);
+      padding: 1.25rem 1.5rem;
+      border-radius: 4px;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .cta-band { background: var(--navy); padding: 4rem 8vw; text-align: center; }
+    .cta-band h2 { font-family: var(--serif); font-size: 2rem; color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band p { color: rgba(255,255,255,0.65); font-weight: 300; margin-bottom: 2rem; }
+    .cta-band .btn { width: auto; }
+
+    footer { background: var(--navy); padding: 3rem 8vw; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-name { font-family: var(--serif); font-size: 1.3rem; color: var(--white); margin-bottom: 0.5rem; }
+    .footer-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+    .footer-disc { font-size: 0.75rem; color: rgba(255,255,255,0.35); max-width: 700px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
+      .sidebar { position: static; }
+      nav { padding: 0 1rem; } .nav-links { display: none; }
+      .page-hero { padding: 3.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Pete Arnold <span>| Edward Jones</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="retirement-planning.html" class="active">Retirement</a></li>
+    <li><a href="roth-conversion.html">Roth Conversion</a></li>
+    <li><a href="small-business.html">Business Owners</a></li>
+    <li><a href="social-security.html">Social Security</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Retirement Planning · Edgewater, FL</p>
+    <h1>Retirement Planning Strategies in Edgewater, FL</h1>
+    <p class="lead">Thinking about retirement in Volusia County? Here's what to consider.</p>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+    <p>Edgewater, Florida is a great place to retire — or to plan for retirement. The combination of no state income tax, a lower cost of living compared to much of the country, and proximity to the coast makes Volusia County an increasingly popular destination for retirees relocating from states like New York, New Jersey, and the Midwest.</p>
+
+    <p>But a good location is only part of the picture. Retirement planning requires careful thought about income, taxes, healthcare, and longevity — and the decisions you make in the years leading up to retirement often have the biggest impact.</p>
+
+    <h2>Key Retirement Planning Considerations</h2>
+
+    <div class="number-block">
+      <h3><span class="num-badge">1</span> When to Claim Social Security</h3>
+      <p>One of the most consequential decisions you'll make is when to begin taking Social Security benefits. You can claim as early as age 62, but your monthly benefit increases significantly the longer you wait — up to age 70. The right answer depends on your health, other income sources, and whether you're married. There is no one-size-fits-all answer.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">2</span> Managing Your Retirement Income Tax Picture</h3>
+      <p>Many retirees are surprised to discover that retirement income isn't necessarily tax-free. Depending on the source — 401(k) withdrawals, Social Security, pensions, or investment accounts — a meaningful portion of your income may still be taxable at the federal level. Florida's lack of a state income tax helps, but federal taxes still apply. Planning your withdrawal strategy in advance can make a real difference.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">3</span> Roth Conversions Before Retirement</h3>
+      <p>The years between retiring and claiming Social Security can create a window of lower taxable income — which some people use strategically to convert traditional IRA or 401(k) funds into a Roth IRA. This isn't right for everyone, but it's worth understanding as part of a broader tax-aware retirement strategy.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">4</span> Required Minimum Distributions (RMDs)</h3>
+      <p>If you have a traditional IRA or 401(k), the IRS requires you to begin taking distributions at a certain age. Failing to plan for RMDs can result in unexpected taxable income and potential penalties. Understanding when your RMDs begin and how much they'll be is an important part of retirement income planning.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">5</span> Healthcare Before Medicare</h3>
+      <p>If you retire before age 65, you'll need to bridge the gap before Medicare coverage begins. This is an often-overlooked cost that can significantly affect your retirement budget. Knowing your options — including marketplace plans and COBRA — is an important part of early retirement planning.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">6</span> Longevity and Sequence of Returns</h3>
+      <p>Retirement can last 20, 25, or even 30 years. That means your financial plan needs to account for the possibility of a long retirement — including the risk that a market downturn early in retirement could have an outsized impact on your savings. This is sometimes called sequence of returns risk, and it's one reason why having a thoughtful withdrawal strategy matters.</p>
+    </div>
+
+    <h2>Retirement Planning in Edgewater and the Surrounding Area</h2>
+
+    <p>Whether you're already living in Edgewater, New Smyrna Beach, Port Orange, or elsewhere in Volusia County — or you're planning a move to the area from out of state — the retirement planning questions are largely the same. What changes is your specific situation: your savings, your income sources, your timeline, and your goals.</p>
+
+    <p>I work with clients locally in Edgewater and virtually across the country. If you're within a few years of retirement and want to think through your options, I'm happy to have that conversation.</p>
+
+    <div class="disclaimer">
+      This content is for educational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Pete Arnold is a Financial Advisor with Edward Jones, Member SIPC.
+    </div>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-box">
+      <h3>Talk to Pete</h3>
+      <p>Have questions about your retirement plan? Let's have an honest conversation — no obligation, no pressure.</p>
+      <a href="mailto:" class="btn">Schedule a Conversation</a>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Related Articles</h3>
+      <ul class="related-links">
+        <li><a href="social-security.html">Social Security Timing — When Should You Claim? →</a></li>
+        <li><a href="roth-conversion.html">What to Consider Before a Roth Conversion →</a></li>
+        <li><a href="small-business.html">Financial Planning for Small Business Owners →</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>About Pete Arnold</h3>
+      <p>Financial Advisor with Edward Jones in Edgewater, FL. Series 7 &amp; 66 Licensed. Enrolled Agent. 12+ years across tax and financial planning.</p>
+      <a href="about.html" class="btn" style="background:transparent;border:1px solid rgba(201,168,76,0.4);color:var(--gold);">Learn More →</a>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-band">
+  <h2>Ready to Think Through Your Retirement Plan?</h2>
+  <p>No pressure. No jargon. Just an honest conversation about where you are and where you want to go.</p>
+  <a href="mailto:" class="btn">Schedule a No-Obligation Conversation</a>
+</div>
+
+<footer>
+  <p class="footer-name">Pete Arnold</p>
+  <p class="footer-sub">Financial Advisor · Edward Jones · Edgewater, FL · Member SIPC</p>
+  <p class="footer-disc">This website is for educational and informational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Edward Jones, Member SIPC.</p>
+</footer>
+
+</body>
+</html>

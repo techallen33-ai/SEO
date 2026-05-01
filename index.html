@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pete Arnold | Financial Advisor | Edgewater, FL</title>
+  <meta name="description" content="Pete Arnold is a Financial Advisor with Edward Jones in Edgewater, FL, serving pre-retirees, retirees, and small business owners locally and nationwide."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2744;
+      --navy-light: #243460;
+      --gold: #c9a84c;
+      --gold-light: #e2c57a;
+      --cream: #f8f5ef;
+      --white: #ffffff;
+      --gray: #6b7280;
+      --gray-light: #f3f0ea;
+      --text: #2d2d2d;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Source Sans 3', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .nav-brand {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-brand span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.5rem 0.85rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover { color: var(--gold); background: rgba(255,255,255,0.05); }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+
+    .hero-rule {
+      position: absolute;
+      top: 0; right: 0;
+      width: 38%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+      border-left: 1px solid rgba(201,168,76,0.15);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 4rem 4rem 4rem 8vw;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.2s;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.4s;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.6s;
+    }
+
+    .hero-creds {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.75s;
+    }
+
+    .cred-badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 2px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2.2rem;
+      border-radius: 3px;
+      transition: all 0.25s;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.9s;
+    }
+
+    .btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201,168,76,0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.4);
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: var(--gold);
+      color: var(--gold);
+      box-shadow: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 8vw; }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-lead {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 580px;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    /* WHO I HELP */
+    .who {
+      background: var(--white);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--cream);
+      padding: 2.5rem;
+      border-radius: 4px;
+      border-top: 3px solid var(--gold);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(26,39,68,0.1);
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-icon svg { width: 20px; height: 20px; fill: var(--gold); }
+
+    .card h3 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .card p { color: var(--gray); font-size: 0.97rem; }
+
+    /* DIFFERENTIATOR */
+    .diff {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diff::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+    }
+
+    .diff .section-title { color: var(--white); }
+    .diff .section-eyebrow { color: var(--gold); }
+
+    .diff-body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .diff-text p {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.05rem;
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+    }
+
+    .diff-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 1.75rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 600;
+    }
+
+    /* GEOGRAPHY */
+    .geo { background: var(--gray-light); }
+
+    .geo-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .geo-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .geo-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(26,39,68,0.1);
+      color: var(--gray);
+      font-size: 0.97rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .geo-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .geo-cta {
+      background: var(--navy);
+      padding: 2.5rem;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .geo-cta h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--white);
+    }
+
+    .geo-cta p {
+      color: rgba(255,255,255,0.68);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      font-size: 0.97rem;
+    }
+
+    .geo-cta .btn { opacity: 1; animation: none; }
+
+    /* ARTICLES PREVIEW */
+    .articles { background: var(--white); }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .article-card {
+      border: 1px solid rgba(26,39,68,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s;
+      display: block;
+    }
+
+    .article-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(26,39,68,0.08);
+    }
+
+    .article-card-top {
+      background: var(--navy);
+      padding: 1.5rem;
+      height: 90px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .article-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .article-card-body { padding: 1.5rem; }
+
+    .article-card-body h3 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+
+    .article-card-body p { font-size: 0.88rem; color: var(--gray); }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 3rem 8vw;
+      text-align: center;
+    }
+
+    .footer-name {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-sub {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-disc {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .hero-content { padding: 3rem 1.5rem; }
+      section { padding: 3.5rem 1.5rem; }
+      .diff-body, .geo-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .diff-stats { grid-template-columns: 1fr 1fr; }
+      .btn-outline { margin-left: 0; margin-top: 0.75rem; display: inline-block; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Pete Arnold <span>| Edward Jones</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="retirement-planning.html">Retirement</a></li>
+    <li><a href="roth-conversion.html">Roth Conversion</a></li>
+    <li><a href="small-business.html">Business Owners</a></li>
+    <li><a href="social-security.html">Social Security</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-rule"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Financial Advisor · Edgewater, FL · Serving Clients Nationwide</p>
+    <h1>Retirement &amp; Financial Planning Built on <em>Real-World Experience</em></h1>
+    <p class="hero-sub">Planning for retirement or running a small business comes with real complexity. I help people cut through the noise — with the tax insight most advisors simply don't have.</p>
+    <div class="hero-creds">
+      <span class="cred-badge">Series 7 &amp; 66 Licensed</span>
+      <span class="cred-badge">Enrolled Agent</span>
+      <span class="cred-badge">ChFC (In Progress)</span>
+      <span class="cred-badge">Edward Jones · Est. 2022</span>
+    </div>
+    <a href="about.html" class="btn">Meet Pete Arnold</a>
+    <a href="mailto:" class="btn btn-outline">Schedule a Conversation</a>
+  </div>
+</section>
+
+<!-- WHO I HELP -->
+<section class="who">
+  <p class="section-eyebrow">Who I Work With</p>
+  <h2 class="section-title">Two Groups. One Focus.<br>Your Financial Future.</h2>
+  <p class="section-lead">I work primarily with pre-retirees, retirees, and small business owners — people who've worked hard and can't afford to make avoidable mistakes at a critical moment.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      </div>
+      <h3>Pre-Retirees &amp; Retirees</h3>
+      <p>You've spent decades building your savings. Now the questions get harder — when to take Social Security, how to manage withdrawals, what your tax picture looks like in retirement. I help you think through all of it.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.36C18 2.55 15.45 0 12 0S6 2.55 6 4.64c0 .48.11.92.18 1.36H4C2.9 6 2 6.9 2 8v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8-4c1.34 0 2 .67 2 1.36 0 .69-.66 1.36-2 1.36s-2-.67-2-1.36C10 2.67 10.66 2 12 2zM11 17H9v-2h2v2zm0-4H9v-4h2v4zm4 4h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+      </div>
+      <h3>Small Business Owners</h3>
+      <p>Running a business means wearing every hat. I help small business owners build a financial strategy that works alongside their business — retirement plans, tax considerations, and long-term planning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATOR -->
+<section class="diff">
+  <div class="diff-body">
+    <div class="diff-text">
+      <p class="section-eyebrow">What Sets Me Apart</p>
+      <h2 class="section-title">A Financial Advisor Who Understands Taxes</h2>
+      <p>Before joining Edward Jones, I spent nine years as a Tax Advisor and Enrolled Agent with H&amp;R Block. That background shapes how I approach financial planning — because a strategy that ignores taxes is an incomplete strategy.</p>
+      <p>I didn't stumble into financial advising. I made a deliberate move because I kept seeing the same gap: people needed more than tax help. They needed a long-term plan. Now I help with both sides of that picture.</p>
+      <a href="about.html" class="btn" style="opacity:1;animation:none;">Learn More About Pete</a>
+    </div>
+    <div class="diff-stats">
+      <div class="stat">
+        <span class="stat-num">9</span>
+        <span class="stat-label">Years as Tax Advisor &amp; EA</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years at Edward Jones</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">FL</span>
+        <span class="stat-label">Based in Edgewater</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">50</span>
+        <span class="stat-label">States Served Virtually</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEOGRAPHY -->
+<section class="geo">
+  <div class="geo-inner">
+    <div>
+      <p class="section-eyebrow">Local Office. Nationwide Reach.</p>
+      <h2 class="section-title">Wherever You Are, We Can Work Together</h2>
+      <p style="color:var(--gray);font-weight:300;">My office is in Edgewater, Florida — serving clients throughout Volusia County and virtually across the country. Distance is never a barrier.</p>
+      <ul class="geo-list">
+        <li>Edgewater, FL (Main Office)</li>
+        <li>New Smyrna Beach, FL</li>
+        <li>Port Orange, FL</li>
+        <li>Daytona Beach, FL</li>
+        <li>Oak Hill &amp; Surrounding Communities</li>
+        <li>Nationwide — Virtual Meetings Available</li>
+      </ul>
+    </div>
+    <div class="geo-cta">
+      <h3>Ready to Have a Real Conversation?</h3>
+      <p>No pressure. No jargon. Just an honest look at where you are and where you want to go.</p>
+      <a href="mailto:" class="btn" style="opacity:1;animation:none;">Schedule a No-Obligation Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles">
+  <p class="section-eyebrow">Educational Resources</p>
+  <h2 class="section-title">Learn Before You Decide</h2>
+  <p class="section-lead">Financial planning decisions are more confident when they're informed ones. Explore these topics at your own pace.</p>
+
+  <div class="article-grid">
+    <a href="retirement-planning.html" class="article-card">
+      <div class="article-card-top"><span class="article-tag">Retirement</span></div>
+      <div class="article-card-body">
+        <h3>Retirement Planning Strategies in Edgewater, FL</h3>
+        <p>Key considerations for those planning retirement in Volusia County and beyond.</p>
+        <span class="read-more">Read Article →</span>
+      </div>
+    </a>
+    <a href="roth-conversion.html" class="article-card">
+      <div class="article-card-top"><span class="article-tag">Tax-Aware Planning</span></div>
+      <div class="article-card-body">
+        <h3>What to Consider Before a Roth Conversion</h3>
+        <p>Understanding the mechanics and considerations behind Roth conversions.</p>
+        <span class="read-more">Read Article →</span>
+      </div>
+    </a>
+    <a href="small-business.html" class="article-card">
+      <div class="article-card-top"><span class="article-tag">Business Owners</span></div>
+      <div class="article-card-body">
+        <h3>Financial Planning for Small Business Owners</h3>
+        <p>Retirement plans, cash flow, and long-term strategy for business owners.</p>
+        <span class="read-more">Read Article →</span>
+      </div>
+    </a>
+    <a href="social-security.html" class="article-card">
+      <div class="article-card-top"><span class="article-tag">Social Security</span></div>
+      <div class="article-card-body">
+        <h3>Social Security Timing — When Should You Claim?</h3>
+        <p>The factors that matter most when deciding when to begin claiming benefits.</p>
+        <span class="read-more">Read Article →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-name">Pete Arnold</p>
+  <p class="footer-sub">Financial Advisor · Edward Jones · Edgewater, FL · Member SIPC</p>
+  <p class="footer-disc">This website is for educational and informational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Edward Jones, Member SIPC.</p>
+</footer>
+
+</body>
+</html>

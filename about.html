@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Pete Arnold | Financial Advisor | Edgewater, FL</title>
+  <meta name="description" content="Learn about Pete Arnold, Financial Advisor with Edward Jones in Edgewater, FL. Former Enrolled Agent and Tax Advisor with 9 years of tax experience."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1a2744; --navy-light: #243460; --gold: #c9a84c; --gold-light: #e2c57a;
+      --cream: #f8f5ef; --white: #ffffff; --gray: #6b7280; --gray-light: #f3f0ea; --text: #2d2d2d;
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Source Sans 3', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--cream); line-height: 1.7; }
+
+    nav {
+      background: var(--navy); padding: 0 2rem; position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav-brand { color: var(--white); font-family: var(--serif); font-size: 1.2rem; text-decoration: none; letter-spacing: 0.02em; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 4px; transition: all 0.2s; letter-spacing: 0.03em; text-transform: uppercase; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); background: rgba(255,255,255,0.05); }
+
+    .page-hero {
+      background: var(--navy);
+      padding: 5rem 8vw 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%);
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); color: var(--white); }
+
+    section { padding: 4.5rem 8vw; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-body h2 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-body p {
+      color: var(--gray);
+      font-size: 1rem;
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+    }
+
+    .sidebar-card {
+      background: var(--navy);
+      padding: 2rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-card h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .cred-list { list-style: none; }
+    .cred-list li {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .cred-list li::before { content: '✦'; color: var(--gold); font-size: 0.6rem; margin-top: 0.35rem; flex-shrink: 0; }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 2rem 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .value-item {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .value-item h4 {
+      font-family: var(--serif);
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .value-item p { font-size: 0.88rem; color: var(--gray); font-weight: 300; }
+
+    .cta-band {
+      background: var(--navy);
+      padding: 4rem 8vw;
+      text-align: center;
+    }
+
+    .cta-band h2 { font-family: var(--serif); font-size: 2rem; color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band p { color: rgba(255,255,255,0.65); font-weight: 300; margin-bottom: 2rem; font-size: 1.05rem; }
+
+    .btn {
+      display: inline-block; background: var(--gold); color: var(--navy); font-family: var(--sans);
+      font-weight: 700; font-size: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; padding: 1rem 2.2rem; border-radius: 3px; transition: all 0.25s;
+    }
+    .btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,168,76,0.3); }
+
+    footer { background: var(--navy); padding: 3rem 8vw; text-align: center; }
+    .footer-name { font-family: var(--serif); font-size: 1.3rem; color: var(--white); margin-bottom: 0.5rem; }
+    .footer-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; letter-spacing: 0.04em; }
+    .footer-disc { font-size: 0.75rem; color: rgba(255,255,255,0.35); max-width: 700px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; } .nav-links { display: none; }
+      section { padding: 3rem 1.5rem; } .page-hero { padding: 3.5rem 1.5rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Pete Arnold <span>| Edward Jones</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="retirement-planning.html">Retirement</a></li>
+    <li><a href="roth-conversion.html">Roth Conversion</a></li>
+    <li><a href="small-business.html">Business Owners</a></li>
+    <li><a href="social-security.html">Social Security</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">About</p>
+    <h1>Pete Arnold</h1>
+  </div>
+</div>
+
+<section style="background: var(--cream);">
+  <div class="about-grid">
+    <div class="about-body">
+      <h2>From Long Island to Florida — Built on a Career of Helping People</h2>
+      <p>I grew up on Long Island, New York, and made the move to Florida to plant roots in a community I now proudly call home. Today, my wife and I are based in Edgewater — and I wouldn't trade it.</p>
+
+      <p>My path to financial advising wasn't accidental. I spent nine years as a Tax Advisor and Enrolled Agent with H&R Block, sitting across the table from real people navigating real financial stress — small business owners buried in quarterly estimates, retirees surprised by their tax bill in April, families trying to make sense of it all. I was good at solving those problems. But I kept seeing the same gap: people needed more than tax help. They needed a long-term plan.</p>
+
+      <p>That's what brought me to Edward Jones. I wanted to be the person who could help from both sides — the planning and the tax picture — so that nothing falls through the cracks.</p>
+
+      <div class="divider"></div>
+
+      <h2>Who I Work With</h2>
+      <p>I work primarily with two groups of people:</p>
+      <p><strong style="color:var(--navy);">Pre-retirees and retirees</strong> who want to make smart decisions about Social Security timing, retirement income, and what their tax picture looks like once they stop working.</p>
+      <p><strong style="color:var(--navy);">Small business owners</strong> who are great at running their business but haven't had time to build a real financial strategy around it.</p>
+      <p>Both groups tend to have one thing in common — they've worked hard and they don't want to make an avoidable mistake at a critical moment. That's where I come in.</p>
+
+      <div class="divider"></div>
+
+      <h2>Beyond the Office</h2>
+      <p>When I'm not working with clients, you'll likely find me on a motorcycle or at a hockey rink. I'm a firm believer that balance matters — in life and in financial planning.</p>
+      <p>Faith and family are at the center of everything I do, and that shapes the way I show up for clients. I take this work seriously because I know the decisions we make together have real consequences for real people.</p>
+
+      <div class="values-grid">
+        <div class="value-item">
+          <h4>Trustworthy</h4>
+          <p>I'll always tell you what I think, not what you want to hear.</p>
+        </div>
+        <div class="value-item">
+          <h4>Experienced</h4>
+          <p>12+ years across tax and financial planning — not a generalist.</p>
+        </div>
+        <div class="value-item">
+          <h4>Client-First</h4>
+          <p>Your goals drive the plan. Not the other way around.</p>
+        </div>
+        <div class="value-item">
+          <h4>Accessible</h4>
+          <p>Local in Edgewater. Available virtually, wherever you are.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <h3>Credentials &amp; Licenses</h3>
+        <ul class="cred-list">
+          <li>Series 7 Licensed</li>
+          <li>Series 66 Licensed</li>
+          <li>Enrolled Agent (EA) — Federally Licensed Tax Practitioner</li>
+          <li>ChFC (Chartered Financial Consultant) — In Progress</li>
+          <li>Edward Jones Financial Advisor since 2022</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Office Location</h3>
+        <ul class="cred-list">
+          <li>Edgewater, Florida</li>
+          <li>Serving Volusia County &amp; Surrounding Areas</li>
+          <li>Virtual Meetings Available Nationwide</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Background</h3>
+        <ul class="cred-list">
+          <li>9 Years — Tax Advisor &amp; Enrolled Agent, H&R Block</li>
+          <li>3+ Years — Financial Advisor, Edward Jones</li>
+          <li>Originally from Long Island, NY</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Ready to Have a Real Conversation?</h2>
+  <p>No pressure. No jargon. Just an honest look at where you are and where you want to go.</p>
+  <a href="mailto:" class="btn">Schedule a No-Obligation Conversation</a>
+</div>
+
+<footer>
+  <p class="footer-name">Pete Arnold</p>
+  <p class="footer-sub">Financial Advisor · Edward Jones · Edgewater, FL · Member SIPC</p>
+  <p class="footer-disc">This website is for educational and informational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Edward Jones, Member SIPC.</p>
+</footer>
+
+</body>
+</html>

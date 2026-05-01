@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Security Timing — When Should You Claim? | Pete Arnold | Edward Jones</title>
+  <meta name="description" content="When should you claim Social Security? Learn about the key factors — health, income, spousal benefits, and more — that affect your decision."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --navy: #1a2744; --gold: #c9a84c; --gold-light: #e2c57a; --cream: #f8f5ef; --white: #ffffff; --gray: #6b7280; --gray-light: #f3f0ea; --text: #2d2d2d; --serif: 'Playfair Display', Georgia, serif; --sans: 'Source Sans 3', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--cream); line-height: 1.7; }
+    nav { background: var(--navy); padding: 0 2rem; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 70px; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .nav-brand { color: var(--white); font-family: var(--serif); font-size: 1.2rem; text-decoration: none; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 4px; transition: all 0.2s; letter-spacing: 0.03em; text-transform: uppercase; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); background: rgba(255,255,255,0.05); }
+    .page-hero { background: var(--navy); padding: 5rem 8vw 4rem; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%); }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .page-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--white); line-height: 1.2; }
+    .page-hero .lead { color: rgba(255,255,255,0.65); font-weight: 300; font-size: 1.05rem; margin-top: 1rem; }
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 4.5rem 8vw; align-items: start; }
+    .article-body h2 { font-family: var(--serif); font-size: 1.6rem; color: var(--navy); margin: 2.5rem 0 1rem; }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p { color: var(--gray); font-size: 1rem; font-weight: 300; margin-bottom: 1.1rem; }
+    .article-body strong { color: var(--navy); font-weight: 600; }
+    .age-timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+    .age-box { padding: 1.5rem; border-radius: 4px; text-align: center; }
+    .age-box.early { background: var(--gray-light); border-top: 3px solid #94a3b8; }
+    .age-box.fra { background: #fff9ee; border-top: 3px solid var(--gold); }
+    .age-box.max { background: #f0f9f0; border-top: 3px solid #4ade80; }
+    .age-box .age-num { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--navy); display: block; }
+    .age-box .age-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray); margin: 0.25rem 0 0.6rem; display: block; }
+    .age-box p { font-size: 0.82rem; color: var(--gray); margin: 0; }
+    .number-block { background: var(--white); border-left: 4px solid var(--gold); padding: 1.5rem 1.75rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+    .number-block h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); margin: 0 0 0.6rem; display: flex; align-items: center; gap: 0.75rem; }
+    .number-block p { color: var(--gray); font-size: 0.97rem; font-weight: 300; margin-bottom: 0; }
+    .num-badge { background: var(--navy); color: var(--gold); font-family: var(--serif); font-size: 0.9rem; font-weight: 700; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .sidebar { position: sticky; top: 90px; }
+    .sidebar-box { background: var(--navy); padding: 1.75rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .sidebar-box h3 { font-family: var(--serif); color: var(--gold); font-size: 1rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(201,168,76,0.2); }
+    .sidebar-box p { color: rgba(255,255,255,0.65); font-size: 0.88rem; font-weight: 300; margin-bottom: 1rem; }
+    .btn { display: inline-block; background: var(--gold); color: var(--navy); font-family: var(--sans); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.85rem 1.5rem; border-radius: 3px; transition: all 0.25s; width: 100%; text-align: center; }
+    .btn:hover { background: var(--gold-light); }
+    .related-links { list-style: none; }
+    .related-links li { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .related-links a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; padding: 0.6rem 0; transition: color 0.2s; font-weight: 300; }
+    .related-links a:hover { color: var(--gold); }
+    .disclaimer { background: var(--gray-light); padding: 1.25rem 1.5rem; border-radius: 4px; margin-top: 3rem; font-size: 0.8rem; color: var(--gray); line-height: 1.6; font-style: italic; }
+    .cta-band { background: var(--navy); padding: 4rem 8vw; text-align: center; }
+    .cta-band h2 { font-family: var(--serif); font-size: 2rem; color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band p { color: rgba(255,255,255,0.65); font-weight: 300; margin-bottom: 2rem; }
+    .cta-band .btn { width: auto; }
+    footer { background: var(--navy); padding: 3rem 8vw; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-name { font-family: var(--serif); font-size: 1.3rem; color: var(--white); margin-bottom: 0.5rem; }
+    .footer-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+    .footer-disc { font-size: 0.75rem; color: rgba(255,255,255,0.35); max-width: 700px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; } .sidebar { position: static; } nav { padding: 0 1rem; } .nav-links { display: none; } .page-hero { padding: 3.5rem 1.5rem; } .age-timeline { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-brand">Pete Arnold <span>| Edward Jones</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="retirement-planning.html">Retirement</a></li>
+    <li><a href="roth-conversion.html">Roth Conversion</a></li>
+    <li><a href="small-business.html">Business Owners</a></li>
+    <li><a href="social-security.html" class="active">Social Security</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Social Security</p>
+    <h1>Social Security Timing — When Should You Claim?</h1>
+    <p class="lead">One of the most important retirement decisions you'll make — and one of the most misunderstood.</p>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p>For most Americans, Social Security represents a meaningful — sometimes the largest — source of guaranteed retirement income. And yet the decision of when to claim is one that many people make without fully understanding the long-term implications.</p>
+
+    <p>There's no universally right answer. But there are important factors worth understanding before you decide.</p>
+
+    <h2>The Basics: How Timing Affects Your Benefit</h2>
+
+    <p>You can begin claiming Social Security retirement benefits as early as age 62. However, claiming before your Full Retirement Age (FRA) — which is 67 for most people born after 1960 — permanently reduces your monthly benefit. Every year you delay past your FRA increases your benefit by approximately 8%, up until age 70.</p>
+
+    <div class="age-timeline">
+      <div class="age-box early">
+        <span class="age-num">62</span>
+        <span class="age-label">Earliest Eligibility</span>
+        <p>Permanently reduced monthly benefit. More checks over time, but each one is smaller.</p>
+      </div>
+      <div class="age-box fra">
+        <span class="age-num">67</span>
+        <span class="age-label">Full Retirement Age*</span>
+        <p>Full benefit amount. The baseline for most people born after 1960.</p>
+      </div>
+      <div class="age-box max">
+        <span class="age-num">70</span>
+        <span class="age-label">Maximum Benefit</span>
+        <p>Delayed credits stop here. Waiting past 70 provides no additional increase.</p>
+      </div>
+    </div>
+
+    <p style="font-size:0.82rem;color:var(--gray);font-style:italic;">*Full Retirement Age varies based on birth year. Check ssa.gov for your specific FRA.</p>
+
+    <h2>Factors That Influence the Decision</h2>
+
+    <div class="number-block">
+      <h3><span class="num-badge">1</span> Your Health and Life Expectancy</h3>
+      <p>Social Security timing is, in part, a longevity question. If you claim early, you receive more checks — but smaller ones. If you delay, you receive fewer checks — but larger ones. The break-even point, where delayed claiming pays off, typically falls somewhere in your late 70s to early 80s. Your health and family history are worth factoring in.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">2</span> Whether You're Still Working</h3>
+      <p>If you claim Social Security before your Full Retirement Age and continue working, your benefits may be temporarily reduced depending on how much you earn. Once you reach FRA, this earnings limit no longer applies.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">3</span> Your Other Sources of Retirement Income</h3>
+      <p>If you have other income sources — a pension, retirement account withdrawals, or a spouse's income — you may have more flexibility to delay Social Security and let your benefit grow. If Social Security is your primary income source, the calculus may be different.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">4</span> Spousal and Survivor Benefits</h3>
+      <p>If you're married, the Social Security decision becomes more complex. Your claiming age affects not just your own benefit, but potentially your spouse's survivor benefit as well. For couples, coordinating claiming strategies can be an important part of retirement income planning.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">5</span> The Tax Consideration</h3>
+      <p>Depending on your total income in retirement, a portion of your Social Security benefit may be subject to federal income tax. This is worth understanding as part of your broader retirement income picture — though the specifics vary by situation and are worth discussing with a qualified tax professional.</p>
+    </div>
+
+    <h2>There's No Perfect Formula — But There Is a Right Process</h2>
+
+    <p>The Social Security decision is too important to make based on a rule of thumb or because a neighbor told you what they did. It's worth modeling out your specific situation — your benefit amount, your other income, your health, and your goals — before deciding.</p>
+
+    <p>I work with clients across Volusia County and virtually nationwide to think through retirement income decisions like this one. If Social Security timing is something you're wrestling with, let's talk.</p>
+
+    <div class="disclaimer">
+      This content is for educational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Pete Arnold is a Financial Advisor with Edward Jones, Member SIPC.
+    </div>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-box">
+      <h3>Talk to Pete</h3>
+      <p>Trying to figure out the right time to claim Social Security? Let's model it out together — no obligation.</p>
+      <a href="mailto:" class="btn">Schedule a Conversation</a>
+    </div>
+    <div class="sidebar-box">
+      <h3>Related Articles</h3>
+      <ul class="related-links">
+        <li><a href="retirement-planning.html">Retirement Planning Strategies in Edgewater, FL →</a></li>
+        <li><a href="roth-conversion.html">What to Consider Before a Roth Conversion →</a></li>
+        <li><a href="small-business.html">Financial Planning for Small Business Owners →</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-box">
+      <h3>About Pete Arnold</h3>
+      <p>Financial Advisor with Edward Jones in Edgewater, FL. Series 7 &amp; 66 Licensed. Enrolled Agent. 12+ years across tax and financial planning.</p>
+      <a href="about.html" class="btn" style="background:transparent;border:1px solid rgba(201,168,76,0.4);color:var(--gold);">Learn More →</a>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-band">
+  <h2>Ready to Think Through Your Social Security Timing?</h2>
+  <p>No pressure. No jargon. Just an honest conversation about what makes sense for your situation.</p>
+  <a href="mailto:" class="btn">Schedule a No-Obligation Conversation</a>
+</div>
+
+<footer>
+  <p class="footer-name">Pete Arnold</p>
+  <p class="footer-sub">Financial Advisor · Edward Jones · Edgewater, FL · Member SIPC</p>
+  <p class="footer-disc">This website is for educational and informational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Edward Jones, Member SIPC.</p>
+</footer>
+</body>
+</html>

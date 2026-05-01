@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What to Consider Before a Roth Conversion | Pete Arnold | Edward Jones</title>
+  <meta name="description" content="Understanding Roth conversions — what they are, when they may make sense, and key factors to consider before making a decision."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1a2744; --gold: #c9a84c; --gold-light: #e2c57a;
+      --cream: #f8f5ef; --white: #ffffff; --gray: #6b7280; --gray-light: #f3f0ea; --text: #2d2d2d;
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Source Sans 3', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--cream); line-height: 1.7; }
+    nav { background: var(--navy); padding: 0 2rem; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 70px; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .nav-brand { color: var(--white); font-family: var(--serif); font-size: 1.2rem; text-decoration: none; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 4px; transition: all 0.2s; letter-spacing: 0.03em; text-transform: uppercase; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); background: rgba(255,255,255,0.05); }
+    .page-hero { background: var(--navy); padding: 5rem 8vw 4rem; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%); }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .page-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--white); line-height: 1.2; }
+    .page-hero .lead { color: rgba(255,255,255,0.65); font-weight: 300; font-size: 1.05rem; margin-top: 1rem; }
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 4.5rem 8vw; align-items: start; }
+    .article-body h2 { font-family: var(--serif); font-size: 1.6rem; color: var(--navy); margin: 2.5rem 0 1rem; }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--navy); margin: 2rem 0 0.6rem; }
+    .article-body p { color: var(--gray); font-size: 1rem; font-weight: 300; margin-bottom: 1.1rem; }
+    .article-body strong { color: var(--navy); font-weight: 600; }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0; }
+    .compare-box { padding: 1.5rem; border-radius: 4px; }
+    .compare-box.traditional { background: var(--gray-light); border-top: 3px solid var(--navy); }
+    .compare-box.roth { background: #fff9ee; border-top: 3px solid var(--gold); }
+    .compare-box h4 { font-family: var(--serif); font-size: 1rem; color: var(--navy); margin-bottom: 0.75rem; }
+    .compare-box p { font-size: 0.88rem; color: var(--gray); margin-bottom: 0; }
+    .number-block { background: var(--white); border-left: 4px solid var(--gold); padding: 1.5rem 1.75rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+    .number-block h3 { margin-top: 0; display: flex; align-items: center; gap: 0.75rem; }
+    .num-badge { background: var(--navy); color: var(--gold); font-family: var(--serif); font-size: 0.9rem; font-weight: 700; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .sidebar { position: sticky; top: 90px; }
+    .sidebar-box { background: var(--navy); padding: 1.75rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .sidebar-box h3 { font-family: var(--serif); color: var(--gold); font-size: 1rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(201,168,76,0.2); }
+    .sidebar-box p { color: rgba(255,255,255,0.65); font-size: 0.88rem; font-weight: 300; margin-bottom: 1rem; }
+    .btn { display: inline-block; background: var(--gold); color: var(--navy); font-family: var(--sans); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.85rem 1.5rem; border-radius: 3px; transition: all 0.25s; width: 100%; text-align: center; }
+    .btn:hover { background: var(--gold-light); }
+    .related-links { list-style: none; }
+    .related-links li { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .related-links a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; padding: 0.6rem 0; transition: color 0.2s; font-weight: 300; }
+    .related-links a:hover { color: var(--gold); }
+    .disclaimer { background: var(--gray-light); padding: 1.25rem 1.5rem; border-radius: 4px; margin-top: 3rem; font-size: 0.8rem; color: var(--gray); line-height: 1.6; font-style: italic; }
+    .cta-band { background: var(--navy); padding: 4rem 8vw; text-align: center; }
+    .cta-band h2 { font-family: var(--serif); font-size: 2rem; color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band p { color: rgba(255,255,255,0.65); font-weight: 300; margin-bottom: 2rem; }
+    .cta-band .btn { width: auto; }
+    footer { background: var(--navy); padding: 3rem 8vw; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-name { font-family: var(--serif); font-size: 1.3rem; color: var(--white); margin-bottom: 0.5rem; }
+    .footer-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+    .footer-disc { font-size: 0.75rem; color: rgba(255,255,255,0.35); max-width: 700px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; } .sidebar { position: static; } nav { padding: 0 1rem; } .nav-links { display: none; } .page-hero { padding: 3.5rem 1.5rem; } .compare-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-brand">Pete Arnold <span>| Edward Jones</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="retirement-planning.html">Retirement</a></li>
+    <li><a href="roth-conversion.html" class="active">Roth Conversion</a></li>
+    <li><a href="small-business.html">Business Owners</a></li>
+    <li><a href="social-security.html">Social Security</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Tax-Aware Planning</p>
+    <h1>What to Consider Before a Roth Conversion</h1>
+    <p class="lead">Roth conversions can be a meaningful part of a retirement strategy — but they're not right for everyone. Here's what to understand first.</p>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <h2>What Is a Roth Conversion?</h2>
+    <p>A Roth conversion is the process of moving money from a traditional IRA or 401(k) into a Roth IRA. The key difference between the two account types is how they're taxed:</p>
+
+    <div class="compare-grid">
+      <div class="compare-box traditional">
+        <h4>Traditional IRA / 401(k)</h4>
+        <p>Contributions are typically made pre-tax. You pay taxes when you withdraw the money in retirement.</p>
+      </div>
+      <div class="compare-box roth">
+        <h4>Roth IRA</h4>
+        <p>Contributions are made with after-tax dollars. Qualified withdrawals in retirement are generally tax-free.</p>
+      </div>
+    </div>
+
+    <p>When you convert, you're essentially paying taxes now in exchange for tax-free growth and withdrawals later. Whether that trade-off makes sense depends entirely on your individual situation.</p>
+
+    <h2>Key Considerations Before Converting</h2>
+
+    <div class="number-block">
+      <h3><span class="num-badge">1</span> Your Current vs. Future Tax Rate</h3>
+      <p>The core question behind any Roth conversion is whether you expect your tax rate to be higher or lower in retirement than it is today. If you expect to be in a higher bracket later, converting now — and paying taxes at a lower rate — may make sense. If you expect your rate to drop in retirement, the calculus may be different.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">2</span> Where Will You Get the Money to Pay the Taxes?</h3>
+      <p>Converting triggers a taxable event. Ideally, you'd pay the resulting tax bill from outside funds — not from the converted amount itself. Using money from the converted account to cover taxes reduces the long-term benefit of the conversion.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">3</span> Your Time Horizon</h3>
+      <p>Roth conversions tend to make more sense the longer your time horizon. The tax-free growth has more time to compound, and you have more years to recover the upfront tax cost. Conversions closer to retirement may still make sense depending on your situation, but the math is worth examining carefully.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">4</span> RMD Planning</h3>
+      <p>Traditional IRAs and 401(k)s are subject to Required Minimum Distributions starting at a certain age. Roth IRAs are not subject to RMDs during the owner's lifetime. For people who don't need the income and want to reduce future RMDs, a conversion strategy may be worth exploring.</p>
+    </div>
+
+    <div class="number-block">
+      <h3><span class="num-badge">5</span> The Conversion Window</h3>
+      <p>For some retirees, the years between leaving work and claiming Social Security can represent a period of temporarily lower taxable income. This window is sometimes used strategically to convert funds at a potentially lower tax rate. Whether this applies to your situation depends on your income sources and overall financial picture.</p>
+    </div>
+
+    <h2>This Is a Planning Decision — Not a One-Size-Fits-All Answer</h2>
+    <p>Roth conversions involve tax implications that vary significantly based on individual circumstances. This article is intended to be educational — not a recommendation to convert. Before making any decisions, it's worth having a conversation with a financial advisor and a qualified tax professional to evaluate what makes sense for your specific situation.</p>
+
+    <div class="disclaimer">
+      This content is for educational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Pete Arnold is a Financial Advisor with Edward Jones, Member SIPC.
+    </div>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-box">
+      <h3>Talk to Pete</h3>
+      <p>Want to think through whether a Roth conversion fits your situation? Let's have a real conversation — no obligation.</p>
+      <a href="mailto:" class="btn">Schedule a Conversation</a>
+    </div>
+    <div class="sidebar-box">
+      <h3>Related Articles</h3>
+      <ul class="related-links">
+        <li><a href="retirement-planning.html">Retirement Planning Strategies in Edgewater, FL →</a></li>
+        <li><a href="social-security.html">Social Security Timing — When Should You Claim? →</a></li>
+        <li><a href="small-business.html">Financial Planning for Small Business Owners →</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-box">
+      <h3>About Pete Arnold</h3>
+      <p>Financial Advisor with Edward Jones in Edgewater, FL. Series 7 &amp; 66 Licensed. Enrolled Agent. 12+ years across tax and financial planning.</p>
+      <a href="about.html" class="btn" style="background:transparent;border:1px solid rgba(201,168,76,0.4);color:var(--gold);">Learn More →</a>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-band">
+  <h2>Have Questions About Your Retirement Strategy?</h2>
+  <p>No pressure. No jargon. Just an honest conversation about where you are and where you want to go.</p>
+  <a href="mailto:" class="btn">Schedule a No-Obligation Conversation</a>
+</div>
+
+<footer>
+  <p class="footer-name">Pete Arnold</p>
+  <p class="footer-sub">Financial Advisor · Edward Jones · Edgewater, FL · Member SIPC</p>
+  <p class="footer-disc">This website is for educational and informational purposes only and does not constitute financial, tax, or legal advice. Please consult a qualified professional regarding your individual situation. Edward Jones, Member SIPC.</p>
+</footer>
+</body>
+</html>
