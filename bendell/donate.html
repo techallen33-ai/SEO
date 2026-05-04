@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Heather Bendl for FL House District 30</title>
+  <meta name="description" content="Support Heather Bendl's campaign for Florida House of Representatives District 30. Contributions are limited to $1,000 per election under Florida law." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <span>Republican Candidate &bull; Florida House of Representatives &bull; District 30 &bull; Primary: August 18, 2026</span>
+      <div class="topbar__social">
+        <a href="https://www.facebook.com/ElectHeatherBendl" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@JusticefortheSerlickChildren" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__brand">
+        <span class="navbar__brand-name">Heather Bendl</span>
+        <span class="navbar__brand-sub">FL House District 30 &bull; Republican</span>
+      </a>
+      <ul class="navbar__nav" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Heather</a></li>
+        <li><a href="platform.html">Platform</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="navbar__donate">Donate</a></li>
+      </ul>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="page-hero__breadcrumb"><a href="index.html">Home</a> &rsaquo; Donate</p>
+    <h1>Support Heather's Campaign</h1>
+    <p>Every dollar fuels grassroots outreach across Volusia &amp; Brevard County. Help us win on August 18, 2026.</p>
+  </div>
+
+  <section class="donate-section">
+    <div class="container">
+      <div class="donate-grid">
+
+        <!-- DONATION FORM -->
+        <div>
+          <div class="donate-form-wrap">
+            <h2>Make a Contribution</h2>
+            <p>Select an amount below. You will be directed to PayPal to complete your secure donation.</p>
+
+            <div id="donate-alert"></div>
+
+            <form id="donate-form" novalidate>
+
+              <!-- AMOUNT SELECTION -->
+              <div class="form-group">
+                <label>Select Donation Amount <span class="req">*</span></label>
+                <div class="amount-grid">
+                  <button type="button" class="amount-btn" data-amount="25">$25</button>
+                  <button type="button" class="amount-btn" data-amount="50">$50</button>
+                  <button type="button" class="amount-btn selected" data-amount="100">$100</button>
+                  <button type="button" class="amount-btn" data-amount="250">$250</button>
+                  <button type="button" class="amount-btn" data-amount="500">$500</button>
+                  <button type="button" class="amount-btn" data-amount="1000">$1,000</button>
+                </div>
+                <div class="custom-amount">
+                  <span class="custom-amount__prefix">$</span>
+                  <input type="number" id="custom-amount" min="1" max="1000" step="1" placeholder="Or enter custom amount (max $1,000)" />
+                </div>
+                <p style="font-size:0.8rem;color:var(--gray);margin-top:6px;">
+                  Florida law limits individual contributions to <strong>$1,000 per election</strong>. Primary and General are separate elections.
+                </p>
+              </div>
+
+              <hr style="border:none;border-top:1px solid var(--gray-light);margin:24px 0;" />
+
+              <!-- DONOR INFORMATION -->
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:20px;">
+                Florida law (F.S. §106.055) requires campaigns to collect the following information for all contributions. Fields marked <span style="color:var(--red);">*</span> are required.
+              </p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="donor-first">First Name <span class="req">*</span></label>
+                  <input type="text" id="donor-first" name="first_name" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="donor-last">Last Name <span class="req">*</span></label>
+                  <input type="text" id="donor-last" name="last_name" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="donor-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="donor-email" name="email" autocomplete="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="donor-address">Street Address <span class="req">*</span></label>
+                <input type="text" id="donor-address" name="address" autocomplete="street-address" required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="donor-city">City <span class="req">*</span></label>
+                  <input type="text" id="donor-city" name="city" autocomplete="address-level2" required />
+                </div>
+                <div class="form-group">
+                  <label for="donor-state">State <span class="req">*</span></label>
+                  <select id="donor-state" name="state" autocomplete="address-level1" required>
+                    <option value="">— Select —</option>
+                    <option value="FL" selected>Florida</option>
+                    <option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option>
+                    <option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option>
+                    <option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option>
+                    <option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option>
+                    <option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option>
+                    <option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option><option value="DC">Washington D.C.</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="donor-zip">ZIP Code <span class="req">*</span></label>
+                <input type="text" id="donor-zip" name="zip" autocomplete="postal-code" maxlength="10" required />
+              </div>
+
+              <div class="form-group">
+                <label for="donor-occupation">Occupation <span class="req">*</span></label>
+                <input type="text" id="donor-occupation" name="occupation" placeholder="e.g. Teacher, Retired, Engineer" required />
+              </div>
+
+              <div class="form-group">
+                <label for="donor-employer">Employer <span class="req">*</span></label>
+                <input type="text" id="donor-employer" name="employer" placeholder="e.g. Self-Employed, Retired, ABC Company" required />
+              </div>
+
+              <!-- CERTIFICATION CHECKBOXES -->
+              <div style="background:var(--light);border-radius:var(--radius);padding:20px;margin:24px 0;">
+                <p style="font-size:0.82rem;font-weight:700;color:var(--navy);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">Required Certifications</p>
+
+                <div class="form-check">
+                  <input type="checkbox" id="certify-eligible" name="certify_eligible" required />
+                  <label for="certify-eligible">
+                    I am a U.S. citizen or lawfully admitted permanent resident. I am making this contribution with my own personal funds, not those of another. I am not a foreign national, corporation, labor organization, or government contractor making this contribution from prohibited funds.
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" id="certify-limit" name="certify_limit" required />
+                  <label for="certify-limit">
+                    I understand that Florida law limits individual contributions to <strong>$1,000 per election</strong> to a candidate for state office (F.S. §106.08), and that my total contributions to Heather Bendl for this election do not exceed this limit.
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" id="certify-notax" name="certify_notax" />
+                  <label for="certify-notax">
+                    I understand that contributions to political campaigns are <strong>not tax-deductible</strong> for federal or state income tax purposes.
+                  </label>
+                </div>
+              </div>
+
+              <!-- PAYPAL SECTION -->
+              <div class="paypal-section">
+                <p>You will be securely redirected to PayPal to complete your contribution. You may pay with your PayPal account or any major credit/debit card.</p>
+
+                <!-- ============================================================
+                     PAYPAL INTEGRATION — PLACEHOLDER
+                     Replace YOUR_PAYPAL_HOSTED_BUTTON_ID with the actual
+                     PayPal hosted button ID from your PayPal business account.
+                     To generate one: PayPal Dashboard → Pay & Get Paid →
+                     PayPal Buttons → Donate → Copy Button ID.
+                     ============================================================ -->
+                <button type="submit" class="paypal-btn-placeholder">
+                  Donate Securely via <span class="paypal-logo"><span>Pay</span><span>Pal</span></span>
+                </button>
+
+                <!-- ALTERNATE: Static PayPal donate form (use if JS redirect is not preferred)
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                  <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_HOSTED_BUTTON_ID" />
+                  <input type="hidden" name="currency_code" value="USD" />
+                  <input type="image"
+                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                    border="0" name="submit"
+                    title="PayPal - The safer, easier way to pay online!"
+                    alt="Donate with PayPal button" />
+                </form>
+                -->
+
+                <p style="margin-top:14px;font-size:0.78rem;color:var(--gray);">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:middle;margin-right:4px;"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  Secured by PayPal &bull; 256-bit SSL encryption &bull; Your financial information is never stored on our servers
+                </p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="donate-sidebar">
+
+          <div class="donate-rules">
+            <h3>Florida Campaign Finance Rules</h3>
+            <ul>
+              <li><strong>$1,000 limit</strong> per election per individual (primary &amp; general are separate)</li>
+              <li>Contributions must come from <strong>personal funds</strong> only</li>
+              <li>Must provide name, address, occupation &amp; employer</li>
+              <li>Check must be payable to <strong>"Heather Bendl Campaign"</strong></li>
+              <li>Cash contributions are limited to <strong>$50 per person</strong></li>
+              <li>Electronic contributions are accepted via PayPal</li>
+              <li>Contributions are <strong>not tax-deductible</strong></li>
+            </ul>
+          </div>
+
+          <div class="donate-prohibited">
+            <h3>&#9888; Prohibited Contributions</h3>
+            <ul>
+              <li>Corporations &amp; LLCs (in their own name)</li>
+              <li>Labor organizations &amp; unions</li>
+              <li>Foreign nationals &amp; foreign governments</li>
+              <li>Federal government contractors (from contract funds)</li>
+              <li>Contributions in another person's name</li>
+              <li>Anonymous contributions over $50</li>
+            </ul>
+          </div>
+
+          <div class="donate-contact">
+            <h3>Prefer to Donate by Check?</h3>
+            <p>Make checks payable to <strong>"Heather Bendl Campaign"</strong> and mail to:</p>
+            <p>
+              Heather Bendl Campaign<br />
+              [CAMPAIGN MAILING ADDRESS]<br />
+              Edgewater, FL [ZIP CODE]
+            </p>
+            <p style="margin-top:12px;">Questions? Email us at<br /><a href="mailto:campaign@heatherbendell.com">campaign@heatherbendell.com</a></p>
+          </div>
+
+          <div style="background:var(--light);border-radius:var(--radius-lg);padding:24px;margin-top:24px;text-align:center;">
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">Prefer to give your time instead?</p>
+            <a href="volunteer.html" class="btn btn--navy w-full" style="display:block;text-align:center;">Volunteer with Us</a>
+          </div>
+
+        </aside>
+      </div>
+
+      <!-- FULL LEGAL DISCLOSURE -->
+      <div style="margin-top:48px;padding:28px;background:var(--light);border-radius:var(--radius-lg);border-left:4px solid var(--navy);">
+        <h3 style="font-size:1rem;color:var(--navy);margin-bottom:12px;">Campaign Finance Legal Disclosure</h3>
+        <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.7;margin:0;">
+          Contributions to Heather Bendl for State Representative, District 30 are governed by the Florida Election Campaign Financing Act (Chapter 106, Florida Statutes). Individual contributions are limited to $1,000 per election. The primary election (August 18, 2026) and the general election (November 3, 2026) are separate elections, each with their own $1,000 contribution limit. Contributions from corporations, limited liability companies, partnerships, labor organizations, and foreign nationals are strictly prohibited under Florida law. All contributions over $100 require the contributor's name, address, occupation, and employer to be reported to the Florida Division of Elections. Contributions are not tax-deductible as charitable contributions for federal or Florida state income tax purposes. By contributing, you represent that the contribution is made from your own funds and not those of another, and that you are not a foreign national. This campaign has filed all required forms with the Florida Division of Elections. Campaign Treasurer: [TREASURER NAME — TO BE ADDED]. Registered Agent: [NAME — TO BE ADDED].
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="legal-disclaimer">
+    Political advertisement paid for and approved by Heather Bendl, Republican, for State Representative, District 30.
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <span class="footer__brand-name">Heather Bendl</span>
+        <span class="footer__brand-sub">FL House District 30 &bull; Republican</span>
+        <p class="footer__desc">Fighting for the families and communities of Volusia and Brevard County.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/ElectHeatherBendl" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@JusticefortheSerlickChildren" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Heather</a></li>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="platform.html#education">Education</a></li>
+          <li><a href="platform.html#family-courts">Family Court Reform</a></li>
+          <li><a href="platform.html#environment">Environment</a></li>
+          <li><a href="platform.html#insurance">Property Insurance</a></li>
+          <li><a href="platform.html#accountability">Accountability</a></li>
+          <li><a href="platform.html#civil-rights">Civil Rights</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Send a Message</a></li>
+          <li><a href="volunteer.html">Volunteer Sign-Up</a></li>
+          <li><a href="mailto:campaign@heatherbendell.com">Email Campaign</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">
+        Political advertisement paid for and approved by Heather Bendl, Republican, for State Representative, District 30. Contributions are limited to $1,000 per election. Contributions from corporations, labor organizations, and foreign nationals are prohibited. Contributions are not tax-deductible.
+      </p>
+      <p class="footer__copyright">&copy; 2026 Elect Heather Bendl &bull; Paid for by Heather Bendl Campaign &bull; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
