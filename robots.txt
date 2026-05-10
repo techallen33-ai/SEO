@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techallen33-ai.github.io/SEO/sitemap.xml
